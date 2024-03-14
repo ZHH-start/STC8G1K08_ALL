@@ -1,5 +1,5 @@
-#include "KEY.zhh"
-#include "UART.zhh"
+#include "key.zhh"
+#include "uart.zhh"
 
 /*
  *Key

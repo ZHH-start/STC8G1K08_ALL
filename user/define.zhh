@@ -1,5 +1,5 @@
-#ifndef __COMMON_H_
-#define __COMMON_H_
+#ifndef __DEFINE_ZHH_
+#define __DEFINE_ZHH_
 #include "stc8g.h"
 #include "intrins.h"
 

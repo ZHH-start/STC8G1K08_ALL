@@ -1,12 +1,10 @@
 #ifndef	__MAIN_H
 #define	__MAIN_H
 
-// #include "key.zhh"
-// #include "uart.zhh"
-// #include "delay.zhh"
-
-#include "KEY.zhh"
-#include "UART.zhh"
+#include "key.zhh"
+#include "uart.zhh"
 #include "delay.zhh"
+#include "vl53l0x.zhh"
+#include "iic.zhh"
 
 #endif

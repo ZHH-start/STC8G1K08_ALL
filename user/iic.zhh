@@ -1,0 +1,18 @@
+#ifndef __I2C_ZHH_
+#define __I2C_ZHH_
+
+#include "define.zhh"
+
+//定义需要用到的IO口，改动需要同时修改C文件中的初始化函数
+sbit I2C_SCL = P3^2;
+sbit I2C_SDA = P3^3;
+
+//--声明全局变量--//
+void I2C_Init();
+void I2C_Start();
+void I2C_Stop();
+uint8 I2C_SendByte(uint8 dat);
+uint8 I2C_ReadByte();
+// void I2C_SendACK(bit ack);
+
+#endif
