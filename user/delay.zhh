@@ -1,0 +1,8 @@
+#ifndef __DELAY_H
+#define __DELAY_H
+#include "define.zhh"
+
+void delay_ms(uint16 x);
+void delay_us(uint16 x);
+
+#endif

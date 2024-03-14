@@ -1,0 +1,71 @@
+{
+  "name": "111",
+  "type": "C51",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Source Group 1",
+        "files": [
+          {
+            "path": "user/delay.c"
+          },
+          {
+            "path": "user/iic.c"
+          },
+          {
+            "path": "user/key.c"
+          },
+          {
+            "path": "user/main.c"
+          },
+          {
+            "path": "user/uart.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "daf094c8dc03264f0d0935a33ff49074"
+  },
+  "targets": {
+    "Target 1": {
+      "excludeList": [
+        "<virtual_root>/New Group",
+        "<virtual_root>/Source Group 1/uart_test.c",
+        "<virtual_root>/Source Group 1/iic.c"
+      ],
+      "toolchain": "Keil_C51",
+      "compileConfig": {
+        "options": "null"
+      },
+      "uploader": "Custom",
+      "uploadConfig": {
+        "bin": "",
+        "commandLine": "",
+        "eraseChipCommand": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "c:/Keil_v5/C51/INC/STC",
+          "user",
+          "STD_LIB"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": []
+      }
+    }
+  },
+  "version": "3.3"
+}

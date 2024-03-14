@@ -1,0 +1,59 @@
+C51 COMPILER V9.60.0.0   STC8G_H_COMPARE                                                   01/26/2024 23:04:38 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE STC8G_H_COMPARE
+OBJECT MODULE PLACED IN .\output\STC8G_H_Compare.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE STD_LIB\STC8G_H_Compare.c ROM(COMPACT) OPTIMIZE(8,SPEED) BROWSE INCDIR(.
+                    -\user;.\STD_LIB) DEBUG OBJECTEXTEND PRINT(.\output\STC8G_H_Compare.lst) TABS(2) OBJECT(.\output\STC8G_H_Compare.obj)
+
+line level    source
+
+   1          /*---------------------------------------------------------------------*/
+   2          /* --- STC MCU Limited ------------------------------------------------*/
+   3          /* --- STC 1T Series MCU Demo Programme -------------------------------*/
+   4          /* --- Mobile: (86)13922805190 ----------------------------------------*/
+   5          /* --- Fax: 86-0513-55012956,55012947,55012969 ------------------------*/
+   6          /* --- Tel: 86-0513-55012928,55012929,55012966 ------------------------*/
+   7          /* --- Web: www.STCAI.com ---------------------------------------------*/
+   8          /* --- BBS: www.STCAIMCU.com  -----------------------------------------*/
+   9          /* --- QQ:  800003751 -------------------------------------------------*/
+  10          /* 如果要在程序中使用此代码,请在程序中注明使用了STC的资料及程序            */
+  11          /*---------------------------------------------------------------------*/
+  12          
+  13          #include  "STC8G_H_Compare.h"
+  14          
+  15          //========================================================================
+  16          // 函数:void  CMP_Inilize(CMP_InitDefine *CMPx)
+  17          // 描述: 比较器初始化程序.
+  18          // 参数: CMPx: 结构参数,请参考compare.h里的定义.
+  19          // 返回: none.
+  20          // 版本: V1.0, 2012-10-22
+  21          //========================================================================
+  22          void  CMP_Inilize(CMP_InitDefine *CMPx)
+  23          {
+  24   1        CMPCR1 &= 0x30;
+  25   1        CMPCR2 = CMPx->CMP_OutDelayDuty & 0x3f;             //比较结果变化延时周期数, 0~63
+  26   1        if(CMPx->CMP_Outpt_En == ENABLE)    CMPCR1 |= CMPOE;    //允许比较结果输出到P3.4/P4.1,   ENABLE,DISABLE
+  27   1        if(CMPx->CMP_InvCMPO     == ENABLE)   CMPCR2 |= INVCMPO;    //比较器输出取反,   ENABLE,DISABLE
+  28   1        if(CMPx->CMP_100nsFilter == DISABLE)  CMPCR2 |= DISFLT;   //内部0.1us滤波,    ENABLE,DISABLE
+  29   1      
+  30   1          CMP_P_Select(CMPx->CMP_P_Select);   //比较器输入负极选择, CMP_P_P37,CMP_P_P50,CMP_P_P51,CMP_P_ADC.
+  31   1          CMP_N_Select(CMPx->CMP_N_Select);   //比较器输入负极选择, CMP_N_GAP: 选择内部BandGap经过OP后的电压做负
+             -输入, CMP_N_P36: 选择P3.6做负输入.
+  32   1          CMP_CHYS_Set(CMPx->CMP_CHYS);       //比较器DC迟滞输入选择
+  33   1        if(CMPx->CMP_EN == ENABLE)        CMPCR1 |= CMPEN;    //允许比较器    ENABLE,DISABLE
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    112    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,403 @@
+C51 COMPILER V9.60.0.0   STC8G_PWM15BIT                                                    01/26/2024 23:04:41 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE STC8G_PWM15BIT
+OBJECT MODULE PLACED IN .\output\STC8G_PWM15bit.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE STD_LIB\STC8G_PWM15bit.c ROM(COMPACT) OPTIMIZE(8,SPEED) BROWSE INCDIR(.\
+                    -user;.\STD_LIB) DEBUG OBJECTEXTEND PRINT(.\output\STC8G_PWM15bit.lst) TABS(2) OBJECT(.\output\STC8G_PWM15bit.obj)
+
+line level    source
+
+   1          /*---------------------------------------------------------------------*/
+   2          /* --- STC MCU Limited ------------------------------------------------*/
+   3          /* --- STC 1T Series MCU Demo Programme -------------------------------*/
+   4          /* --- Mobile: (86)13922805190 ----------------------------------------*/
+   5          /* --- Fax: 86-0513-55012956,55012947,55012969 ------------------------*/
+   6          /* --- Tel: 86-0513-55012928,55012929,55012966 ------------------------*/
+   7          /* --- Web: www.STCAI.com ---------------------------------------------*/
+   8          /* --- BBS: www.STCAIMCU.com  -----------------------------------------*/
+   9          /* --- QQ:  800003751 -------------------------------------------------*/
+  10          /* 如果要在程序中使用此代码,请在程序中注明使用了STC的资料及程序            */
+  11          /*---------------------------------------------------------------------*/
+  12          
+  13          #include  "STC8G_PWM15bit.h"
+  14          
+  15          u16 code PWMxCR[48] = {
+  16            0xff14,   /* PWM00CR */
+  17            0xff1c,   /* PWM01CR */
+  18            0xff24,   /* PWM02CR */
+  19            0xff2c,   /* PWM03CR */
+  20            0xff34,   /* PWM04CR */
+  21            0xff3c,   /* PWM05CR */
+  22            0xff44,   /* PWM06CR */
+  23            0xff4c,   /* PWM07CR */
+  24            0xff64,   /* PWM10CR */
+  25            0xff6c,   /* PWM11CR */
+  26            0xff74,   /* PWM12CR */
+  27            0xff7c,   /* PWM13CR */
+  28            0xff84,   /* PWM14CR */
+  29            0xff8c,   /* PWM15CR */
+  30            0xff94,   /* PWM16CR */
+  31            0xff9c,   /* PWM17CR */
+  32            0xffb4,   /* PWM20CR */
+  33            0xffbc,   /* PWM21CR */
+  34            0xffc4,   /* PWM22CR */
+  35            0xffcc,   /* PWM23CR */
+  36            0xffd4,   /* PWM24CR */
+  37            0xffdc,   /* PWM25CR */
+  38            0xffe4,   /* PWM26CR */
+  39            0xffec,   /* PWM27CR */
+  40            0xfc14,   /* PWM30CR */
+  41            0xfc1c,   /* PWM31CR */
+  42            0xfc24,   /* PWM32CR */
+  43            0xfc2c,   /* PWM33CR */
+  44            0xfc34,   /* PWM34CR */
+  45            0xfc3c,   /* PWM35CR */
+  46            0xfc44,   /* PWM36CR */
+  47            0xfc4c,   /* PWM37CR */
+  48            0xfc64,   /* PWM40CR */
+  49            0xfc6c,   /* PWM41CR */
+  50            0xfc74,   /* PWM42CR */
+  51            0xfc7c,   /* PWM43CR */
+  52            0xfc84,   /* PWM44CR */
+  53            0xfc8c,   /* PWM45CR */
+  54            0xfc94,   /* PWM46CR */
+C51 COMPILER V9.60.0.0   STC8G_PWM15BIT                                                    01/26/2024 23:04:41 PAGE 2   
+
+  55            0xfc9c,   /* PWM47CR */
+  56            0xfcb4,   /* PWM50CR */
+  57            0xfcbc,   /* PWM51CR */
+  58            0xfcc4,   /* PWM52CR */
+  59            0xfccc,   /* PWM53CR */
+  60            0xfcd4,   /* PWM54CR */
+  61            0xfcdc,   /* PWM55CR */
+  62            0xfce4,   /* PWM56CR */
+  63            0xfcec,   /* PWM57CR */
+  64          };
+  65          
+  66          u16 code PWMxT1[48] = {
+  67            0xff10,   /* PWM00T1 */
+  68            0xff18,   /* PWM01T1 */
+  69            0xff20,   /* PWM02T1 */
+  70            0xff28,   /* PWM03T1 */
+  71            0xff30,   /* PWM04T1 */
+  72            0xff38,   /* PWM05T1 */
+  73            0xff40,   /* PWM06T1 */
+  74            0xff48,   /* PWM07T1 */
+  75            0xff60,   /* PWM10T1 */
+  76            0xff68,   /* PWM11T1 */
+  77            0xff70,   /* PWM12T1 */
+  78            0xff78,   /* PWM13T1 */
+  79            0xff80,   /* PWM14T1 */
+  80            0xff88,   /* PWM15T1 */
+  81            0xff90,   /* PWM16T1 */
+  82            0xff98,   /* PWM17T1 */
+  83            0xffb0,   /* PWM20T1 */
+  84            0xffb8,   /* PWM21T1 */
+  85            0xffc0,   /* PWM22T1 */
+  86            0xffc8,   /* PWM23T1 */
+  87            0xffd0,   /* PWM24T1 */
+  88            0xffd8,   /* PWM25T1 */
+  89            0xffe0,   /* PWM26T1 */
+  90            0xffe8,   /* PWM27T1 */
+  91            0xfc10,   /* PWM30T1 */
+  92            0xfc18,   /* PWM31T1 */
+  93            0xfc20,   /* PWM32T1 */
+  94            0xfc28,   /* PWM33T1 */
+  95            0xfc30,   /* PWM34T1 */
+  96            0xfc38,   /* PWM35T1 */
+  97            0xfc40,   /* PWM36T1 */
+  98            0xfc48,   /* PWM37T1 */
+  99            0xfc60,   /* PWM40T1 */
+ 100            0xfc68,   /* PWM41T1 */
+ 101            0xfc70,   /* PWM42T1 */
+ 102            0xfc78,   /* PWM43T1 */
+ 103            0xfc80,   /* PWM44T1 */
+ 104            0xfc88,   /* PWM45T1 */
+ 105            0xfc90,   /* PWM46T1 */
+ 106            0xfc98,   /* PWM47T1 */
+ 107            0xfcb0,   /* PWM50T1 */
+ 108            0xfcb8,   /* PWM51T1 */
+ 109            0xfcc0,   /* PWM52T1 */
+ 110            0xfcc8,   /* PWM53T1 */
+ 111            0xfcd0,   /* PWM54T1 */
+ 112            0xfcd8,   /* PWM55T1 */
+ 113            0xfce0,   /* PWM56T1 */
+ 114            0xfce8,   /* PWM57T1 */
+ 115          };
+ 116          
+C51 COMPILER V9.60.0.0   STC8G_PWM15BIT                                                    01/26/2024 23:04:41 PAGE 3   
+
+ 117          u16 code PWMxT2[48] = {
+ 118            0xff12,   /* PWM00T2 */
+ 119            0xff1a,   /* PWM01T2 */
+ 120            0xff22,   /* PWM02T2 */
+ 121            0xff2a,   /* PWM03T2 */
+ 122            0xff32,   /* PWM04T2 */
+ 123            0xff3a,   /* PWM05T2 */
+ 124            0xff42,   /* PWM06T2 */
+ 125            0xff4a,   /* PWM07T2 */
+ 126            0xff62,   /* PWM10T2 */
+ 127            0xff6a,   /* PWM11T2 */
+ 128            0xff72,   /* PWM12T2 */
+ 129            0xff7a,   /* PWM13T2 */
+ 130            0xff82,   /* PWM14T2 */
+ 131            0xff8a,   /* PWM15T2 */
+ 132            0xff92,   /* PWM16T2 */
+ 133            0xff9a,   /* PWM17T2 */
+ 134            0xffb2,   /* PWM20T2 */
+ 135            0xffba,   /* PWM21T2 */
+ 136            0xffc2,   /* PWM22T2 */
+ 137            0xffca,   /* PWM23T2 */
+ 138            0xffd2,   /* PWM24T2 */
+ 139            0xffda,   /* PWM25T2 */
+ 140            0xffe2,   /* PWM26T2 */
+ 141            0xffea,   /* PWM27T2 */
+ 142            0xfc12,   /* PWM30T2 */
+ 143            0xfc1a,   /* PWM31T2 */
+ 144            0xfc22,   /* PWM32T2 */
+ 145            0xfc2a,   /* PWM33T2 */
+ 146            0xfc32,   /* PWM34T2 */
+ 147            0xfc3a,   /* PWM35T2 */
+ 148            0xfc42,   /* PWM36T2 */
+ 149            0xfc4a,   /* PWM37T2 */
+ 150            0xfc62,   /* PWM40T2 */
+ 151            0xfc6a,   /* PWM41T2 */
+ 152            0xfc72,   /* PWM42T2 */
+ 153            0xfc7a,   /* PWM43T2 */
+ 154            0xfc82,   /* PWM44T2 */
+ 155            0xfc8a,   /* PWM45T2 */
+ 156            0xfc92,   /* PWM46T2 */
+ 157            0xfc9a,   /* PWM47T2 */
+ 158            0xfcb2,   /* PWM50T2 */
+ 159            0xfcba,   /* PWM51T2 */
+ 160            0xfcc2,   /* PWM52T2 */
+ 161            0xfcca,   /* PWM53T2 */
+ 162            0xfcd2,   /* PWM54T2 */
+ 163            0xfcda,   /* PWM55T2 */
+ 164            0xfce2,   /* PWM56T2 */
+ 165            0xfcea,   /* PWM57T2 */
+ 166          };
+ 167          
+ 168          u16 code PWMxHLD[48] = {
+ 169            0xff15,   /* PWM00HLD */
+ 170            0xff1d,   /* PWM01HLD */
+ 171            0xff25,   /* PWM02HLD */
+ 172            0xff2d,   /* PWM03HLD */
+ 173            0xff35,   /* PWM04HLD */
+ 174            0xff3d,   /* PWM05HLD */
+ 175            0xff45,   /* PWM06HLD */
+ 176            0xff4d,   /* PWM07HLD */
+ 177            0xff65,   /* PWM10HLD */
+ 178            0xff6d,   /* PWM11HLD */
+C51 COMPILER V9.60.0.0   STC8G_PWM15BIT                                                    01/26/2024 23:04:41 PAGE 4   
+
+ 179            0xff75,   /* PWM12HLD */
+ 180            0xff7d,   /* PWM13HLD */
+ 181            0xff85,   /* PWM14HLD */
+ 182            0xff8d,   /* PWM15HLD */
+ 183            0xff95,   /* PWM16HLD */
+ 184            0xff9d,   /* PWM17HLD */
+ 185            0xffb5,   /* PWM20HLD */
+ 186            0xffbd,   /* PWM21HLD */
+ 187            0xffc5,   /* PWM22HLD */
+ 188            0xffcd,   /* PWM23HLD */
+ 189            0xffd5,   /* PWM24HLD */
+ 190            0xffdd,   /* PWM25HLD */
+ 191            0xffe5,   /* PWM26HLD */
+ 192            0xffed,   /* PWM27HLD */
+ 193            0xfc15,   /* PWM30HLD */
+ 194            0xfc1d,   /* PWM31HLD */
+ 195            0xfc25,   /* PWM32HLD */
+ 196            0xfc2d,   /* PWM33HLD */
+ 197            0xfc35,   /* PWM34HLD */
+ 198            0xfc3d,   /* PWM35HLD */
+ 199            0xfc45,   /* PWM36HLD */
+ 200            0xfc4d,   /* PWM37HLD */
+ 201            0xfc65,   /* PWM40HLD */
+ 202            0xfc6d,   /* PWM41HLD */
+ 203            0xfc75,   /* PWM42HLD */
+ 204            0xfc7d,   /* PWM43HLD */
+ 205            0xfc85,   /* PWM44HLD */
+ 206            0xfc8d,   /* PWM45HLD */
+ 207            0xfc95,   /* PWM46HLD */
+ 208            0xfc9d,   /* PWM47HLD */
+ 209            0xfcb5,   /* PWM50HLD */
+ 210            0xfcbd,   /* PWM51HLD */
+ 211            0xfcc5,   /* PWM52HLD */
+ 212            0xfccd,   /* PWM53HLD */
+ 213            0xfcd5,   /* PWM54HLD */
+ 214            0xfcdd,   /* PWM55HLD */
+ 215            0xfce5,   /* PWM56HLD */
+ 216            0xfced,   /* PWM57HLD */
+ 217          };
+ 218          
+ 219          //========================================================================
+ 220          // 函数: u8 PWMChannelCtrl(u8 PWM_id, u8 pwm_eno, u8 pwm_ini, u8 pwm_eni, u8 pwm_ent2i, u8 pwm_ent1i)
+ 221          // 描述: PWM通道控制寄存器设置. 
+ 222          // 参数: PWM_id: PWM通道序号. 取值 0~57
+ 223          //       pwm_eno:   pwm输出使能, 0设为GPIO, 1设为PWM输出.
+ 224          //       pwm_ini:   pwm输出端的初始电平, 0为低电平, 1为高电平.
+ 225          //       pwm_eni:   pwm通道中断使能控制, 0为关闭PWM中断, 1为使能PWM中断.
+ 226          //       pwm_ent2i: pwm通道第二个触发点中断使能控制, 0为关闭PWM第二个触发点中断, 1为使能PWM第二个触发点中断.
+ 227          //       pwm_ent1i: pwm通道第一个触发点中断使能控制, 0为关闭PWM第一个触发点中断, 1为使能PWM第一个触发点中断.
+ 228          // 返回: 成功返回 SUCCESS, 错误返回 FAIL.
+ 229          // 版本: V1.0, 2020-09-22
+ 230          //========================================================================
+ 231          u8  PWMChannelCtrl(u8 PWM_id, u8 pwm_eno, u8 pwm_ini, u8 pwm_eni, u8 pwm_ent2i, u8 pwm_ent1i)
+ 232          {
+ 233   1        u8  xdata *pPWMxCR;
+ 234   1        
+ 235   1        if(PWM_id > PWM57)  return FAIL;  //id错误
+ 236   1        if(pwm_eno > 1) return FAIL;  //输出使能错误
+ 237   1        if(pwm_ini > 1) return FAIL;  //输出端的初始电平错误
+ 238   1        if(pwm_eni > 1) return FAIL;  //中断使能控制错误
+ 239   1        if(pwm_ent2i > 1) return FAIL;  //第二个触发点中断使能控制错误
+ 240   1        if(pwm_ent1i > 1) return FAIL;  //第一个触发点中断使能控制错误
+C51 COMPILER V9.60.0.0   STC8G_PWM15BIT                                                    01/26/2024 23:04:41 PAGE 5   
+
+ 241   1        
+ 242   1        pPWMxCR = (u8 *)PWMxCR[PWM_id];
+ 243   1        *pPWMxCR = (pwm_eno << 7) | (pwm_ini << 6) | (pwm_eni << 2)| (pwm_ent2i << 1)| pwm_ent1i;
+ 244   1        return SUCCESS;
+ 245   1      }
+ 246          
+ 247          //========================================================================
+ 248          // 函数: u8 PWM15Duty(u8 PWM_id, u16 Period, u16 dutyL, u16 dutyH)
+ 249          // 描述: PWM 占空比设置. 
+ 250          // 参数: PWM_id:  PWM通道序号. 取值 0~57
+ 251          //       dutyL:   pwm输出低电平位置, 取值 0~0x7fff.
+ 252          //       dutyH:   pwm输出高电平位置, 取值 0~0x7fff.
+ 253          // 返回: 成功返回 SUCCESS, 错误返回 FAIL.
+ 254          // 版本: V1.0, 2020-09-22
+ 255          //========================================================================
+ 256          u8  PWM15Duty(u8 PWM_id, u16 dutyL, u16 dutyH)
+ 257          {
+ 258   1        u16 xdata *pPWMxT1;
+ 259   1        u16 xdata *pPWMxT2;
+ 260   1        
+ 261   1        if(PWM_id > PWM57)  return FAIL;  //id错误
+ 262   1        if(dutyL > 0x7fff)  return FAIL;  //低电平时间设置错误
+ 263   1        if(dutyH > 0x7fff)  return FAIL;  //高电平时间设置错误
+ 264   1        
+ 265   1        pPWMxT1 = (u16 *)PWMxT1[PWM_id];
+ 266   1        *pPWMxT1 = dutyL & 0x7fff;
+ 267   1      
+ 268   1        pPWMxT2 = (u16 *)PWMxT2[PWM_id];
+ 269   1        *pPWMxT2 = dutyH & 0x7fff;
+ 270   1        return SUCCESS;
+ 271   1      }
+ 272          
+ 273          //========================================================================
+ 274          // 函数: u8 PWMLevelSet(u8 PWM_id, u8 pwm_hldl, u8 pwm_hldh)
+ 275          // 描述: PWM通道控制寄存器设置. 
+ 276          // 参数: PWM_id: PWM通道序号. 取值 0~57
+ 277          //       pwm_hldl:   pwm强制输出低电平控制位, 0正常输出, 1强制输出低电平.
+ 278          //       pwm_hldh:   pwm强制输出高电平控制位, 0正常输出, 1强制输出高电平.
+ 279          // 返回: 成功返回 SUCCESS, 错误返回 FAIL.
+ 280          // 版本: V1.0, 2020-09-22
+ 281          //========================================================================
+ 282          u8  PWMLevelSet(u8 PWM_id, u8 pwm_hldl, u8 pwm_hldh)
+ 283          {
+ 284   1        u8  xdata *pPWMxHLD;
+ 285   1        
+ 286   1        if(PWM_id > PWM57)  return FAIL;  //id错误
+ 287   1        if(pwm_hldh > 1)  return FAIL;  //输出使能错误
+ 288   1        if(pwm_hldl > 1)  return FAIL;  //输出端的初始电平错误
+ 289   1        
+ 290   1        pPWMxHLD = (u8 *)PWMxHLD[PWM_id];
+ 291   1        *pPWMxHLD = (pwm_hldh << 1) | pwm_hldl;
+ 292   1        return SUCCESS;
+ 293   1      }
+ 294          
+ 295          //========================================================================
+ 296          // 函数: u8 PWM15_Init(u8 PWM_id, PWM15_InitTypeDef *PWMx)
+ 297          // 描述: 15位增强型PWM初始化程序.
+ 298          // 参数: PWM_id: PWM组号. 取值 PWM0,PWM1,PWM2,PWM3,PWM4,PWM5
+ 299          //     PWMx: 结构参数,请参考头文件里的定义.
+ 300          // 返回: 成功返回 SUCCESS, 错误返回 FAIL.
+ 301          // 版本: V1.0, 2020-09-22
+ 302          //========================================================================
+C51 COMPILER V9.60.0.0   STC8G_PWM15BIT                                                    01/26/2024 23:04:41 PAGE 6   
+
+ 303          u8  PWM15_Init(u8 PWM_id, PWM15_InitTypeDef *PWMx)
+ 304          {
+ 305   1        if(PWM_id > PWM5) return FAIL;    //id错误
+ 306   1      
+ 307   1        if(PWM_id == PWM0)
+ 308   1        {
+ 309   2          PWM15_PWM0_Set(PWMx->PWM_Enable); //使能/关闭 PWM0（包括 PWM00~PWM07）
+ 310   2          PWM0_PS_Set(PWMx->PWM_Clock_PS);  //系统时钟分频参数,  0~15
+ 311   2          PWM0_Clock_Sel(PWMx->PWM_Clock_Sel);  //PWMn时钟源选择
+ 312   2          PWM0C = PWMx->PWM_Period & 0x7fff;
+ 313   2          PWM15_Counter0Int_Set(PWMx->PWM_CInt);  //PWMn计数器归零中断使能设置
+ 314   2          PWM15_Counter0_Set(PWMx->PWM_Counter);  //PWMn计数器使能设置
+ 315   2        }
+ 316   1        
+ 317   1        if(PWM_id == PWM1)
+ 318   1        {
+ 319   2          PWM15_PWM1_Set(PWMx->PWM_Enable); //使能/关闭 PWM1（包括 PWM10~PWM17）
+ 320   2          PWM1_PS_Set(PWMx->PWM_Clock_PS);  //系统时钟分频参数,  0~15
+ 321   2          PWM1_Clock_Sel(PWMx->PWM_Clock_Sel);  //PWMn时钟源选择
+ 322   2          PWM1C = PWMx->PWM_Period & 0x7fff;
+ 323   2          PWM15_Counter1Int_Set(PWMx->PWM_CInt);  //PWMn计数器归零中断使能设置
+ 324   2          PWM15_Counter1_Set(PWMx->PWM_Counter);  //PWMn计数器使能设置
+ 325   2        }
+ 326   1        
+ 327   1        if(PWM_id == PWM2)
+ 328   1        {
+ 329   2          PWM15_PWM2_Set(PWMx->PWM_Enable); //使能/关闭 PWM2（包括 PWM20~PWM27）
+ 330   2          PWM2_PS_Set(PWMx->PWM_Clock_PS);  //系统时钟分频参数,  0~15
+ 331   2          PWM2_Clock_Sel(PWMx->PWM_Clock_Sel);  //PWMn时钟源选择
+ 332   2          PWM2C = PWMx->PWM_Period & 0x7fff;
+ 333   2          PWM15_Counter2Int_Set(PWMx->PWM_CInt);  //PWMn计数器归零中断使能设置
+ 334   2          PWM15_Counter2_Set(PWMx->PWM_Counter);  //PWMn计数器使能设置
+ 335   2        }
+ 336   1        
+ 337   1        if(PWM_id == PWM3)
+ 338   1        {
+ 339   2          PWM15_PWM3_Set(PWMx->PWM_Enable); //使能/关闭 PWM3（包括 PWM30~PWM37）
+ 340   2          PWM3_PS_Set(PWMx->PWM_Clock_PS);  //系统时钟分频参数,  0~15
+ 341   2          PWM3_Clock_Sel(PWMx->PWM_Clock_Sel);  //PWMn时钟源选择
+ 342   2          PWM3C = PWMx->PWM_Period & 0x7fff;
+ 343   2          PWM15_Counter3Int_Set(PWMx->PWM_CInt);  //PWMn计数器归零中断使能设置
+ 344   2          PWM15_Counter3_Set(PWMx->PWM_Counter);  //PWMn计数器使能设置
+ 345   2        }
+ 346   1        
+ 347   1        if(PWM_id == PWM4)
+ 348   1        {
+ 349   2          PWM15_PWM4_Set(PWMx->PWM_Enable); //使能/关闭 PWM4（包括 PWM40~PWM47）
+ 350   2          PWM4_PS_Set(PWMx->PWM_Clock_PS);  //系统时钟分频参数,  0~15
+ 351   2          PWM4_Clock_Sel(PWMx->PWM_Clock_Sel);  //PWMn时钟源选择
+ 352   2          PWM4C = PWMx->PWM_Period & 0x7fff;
+ 353   2          PWM15_Counter4Int_Set(PWMx->PWM_CInt);  //PWMn计数器归零中断使能设置
+ 354   2          PWM15_Counter4_Set(PWMx->PWM_Counter);  //PWMn计数器使能设置
+ 355   2        }
+ 356   1        
+ 357   1        if(PWM_id == PWM5)
+ 358   1        {
+ 359   2          PWM15_PWM5_Set(PWMx->PWM_Enable); //使能/关闭 PWM5（包括 PWM50~PWM54）
+ 360   2          PWM5_PS_Set(PWMx->PWM_Clock_PS);  //系统时钟分频参数,  0~15
+ 361   2          PWM5_Clock_Sel(PWMx->PWM_Clock_Sel);  //PWMn时钟源选择
+ 362   2          PWM5C = PWMx->PWM_Period & 0x7fff;
+ 363   2          PWM15_Counter5Int_Set(PWMx->PWM_CInt);  //PWMn计数器归零中断使能设置
+ 364   2          PWM15_Counter5_Set(PWMx->PWM_Counter);  //PWMn计数器使能设置
+C51 COMPILER V9.60.0.0   STC8G_PWM15BIT                                                    01/26/2024 23:04:41 PAGE 7   
+
+ 365   2        }
+ 366   1        return SUCCESS;
+ 367   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1009    ----
+   CONSTANT SIZE    =    384    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

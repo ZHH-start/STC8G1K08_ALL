@@ -1,0 +1,301 @@
+[2024-01-31 06:11:44] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 06:11:44
+*FILESIZE* : 1335 (0x000537)
+*CODESIZE* : 481 (0x0001E1)
+*CHECKSUM* : 0x0000D8EC
+*ISPMODE* : 2
+*ISPRESULT* : 1
+--------------------
+[2024-01-31 06:11:47] : End
+--------------------------------------------------
+[2024-01-31 06:20:07] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 06:20:07
+*FILESIZE* : 1030 (0x000406)
+*CODESIZE* : 359 (0x000167)
+*CHECKSUM* : 0x00009BB5
+*ISPMODE* : 2
+*ISPRESULT* : 1
+--------------------
+[2024-01-31 06:20:15] : End
+--------------------------------------------------
+[2024-01-31 06:20:25] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 06:20:25
+*FILESIZE* : 1030 (0x000406)
+*CODESIZE* : 359 (0x000167)
+*CHECKSUM* : 0x00009BB5
+*ISPMODE* : 2
+*ISPRESULT* : 1
+--------------------
+[2024-01-31 06:20:33] : End
+--------------------------------------------------
+[2024-01-31 06:58:55] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 06:50:53
+*FILESIZE* : 1038 (0x00040E)
+*CODESIZE* : 359 (0x000167)
+*CHECKSUM* : 0x00009BB5
+*ISPMODE* : 2
+*ISPRESULT* : 1
+--------------------
+[2024-01-31 06:59:02] : End
+--------------------------------------------------
+[2024-01-31 06:59:12] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 06:50:53
+*FILESIZE* : 1038 (0x00040E)
+*CODESIZE* : 363 (0x00016B)
+*CHECKSUM* : 0x00009C87
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 06:59:14] : End
+--------------------------------------------------
+[2024-01-31 07:15:39] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:15:36
+*FILESIZE* : 1656 (0x000678)
+*CODESIZE* : 363 (0x00016B)
+*CHECKSUM* : 0x00009C87
+*ISPMODE* : 2
+*ISPRESULT* : 1
+--------------------
+[2024-01-31 07:15:45] : End
+--------------------------------------------------
+[2024-01-31 07:15:46] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:15:36
+*FILESIZE* : 1656 (0x000678)
+*CODESIZE* : 581 (0x000245)
+*CHECKSUM* : 0x0000ED29
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:15:49] : End
+--------------------------------------------------
+[2024-01-31 07:18:36] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:18:35
+*FILESIZE* : 1760 (0x0006E0)
+*CODESIZE* : 620 (0x00026C)
+*CHECKSUM* : 0x0000F67C
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:18:38] : End
+--------------------------------------------------
+[2024-01-31 07:19:29] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:19:28
+*FILESIZE* : 1883 (0x00075B)
+*CODESIZE* : 662 (0x000296)
+*CHECKSUM* : 0x00010ACC
+*ISPMODE* : 2
+*ISPRESULT* : 1
+--------------------
+[2024-01-31 07:19:36] : End
+--------------------------------------------------
+[2024-01-31 07:19:37] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:19:28
+*FILESIZE* : 1883 (0x00075B)
+*CODESIZE* : 662 (0x000296)
+*CHECKSUM* : 0x00010ACC
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:19:39] : End
+--------------------------------------------------
+[2024-01-31 07:21:43] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:19:28
+*FILESIZE* : 1883 (0x00075B)
+*CODESIZE* : 662 (0x000296)
+*CHECKSUM* : 0x00010ACC
+*ISPMODE* : 2
+*ISPRESULT* : 1
+--------------------
+[2024-01-31 07:21:45] : End
+--------------------------------------------------
+[2024-01-31 07:21:49] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:21:48
+*FILESIZE* : 1897 (0x000769)
+*CODESIZE* : 669 (0x00029D)
+*CHECKSUM* : 0x00010CC4
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:21:51] : End
+--------------------------------------------------
+[2024-01-31 07:22:38] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:22:37
+*FILESIZE* : 1946 (0x00079A)
+*CODESIZE* : 687 (0x0002AF)
+*CHECKSUM* : 0x0001148F
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:22:40] : End
+--------------------------------------------------
+[2024-01-31 07:23:33] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:23:32
+*FILESIZE* : 1932 (0x00078C)
+*CODESIZE* : 680 (0x0002A8)
+*CHECKSUM* : 0x000112A9
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:23:35] : End
+--------------------------------------------------
+[2024-01-31 07:24:06] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:24:05
+*FILESIZE* : 1918 (0x00077E)
+*CODESIZE* : 673 (0x0002A1)
+*CHECKSUM* : 0x000110AC
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:24:08] : End
+--------------------------------------------------
+[2024-01-31 07:28:05] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:28:04
+*FILESIZE* : 1932 (0x00078C)
+*CODESIZE* : 680 (0x0002A8)
+*CHECKSUM* : 0x000112A9
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:28:07] : End
+--------------------------------------------------
+[2024-01-31 07:30:36] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:30:35
+*FILESIZE* : 2014 (0x0007DE)
+*CODESIZE* : 708 (0x0002C4)
+*CHECKSUM* : 0x00012918
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:30:38] : End
+--------------------------------------------------
+[2024-01-31 07:32:00] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:31:59
+*FILESIZE* : 1932 (0x00078C)
+*CODESIZE* : 680 (0x0002A8)
+*CHECKSUM* : 0x000112A9
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:32:02] : End
+--------------------------------------------------
+[2024-01-31 07:34:32] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 07:34:31
+*FILESIZE* : 1928 (0x000788)
+*CODESIZE* : 678 (0x0002A6)
+*CHECKSUM* : 0x00010BF4
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 07:34:34] : End
+--------------------------------------------------
+[2024-01-31 08:41:26] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 08:41:25
+*FILESIZE* : 1928 (0x000788)
+*CODESIZE* : 678 (0x0002A6)
+*CHECKSUM* : 0x00010BF5
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 08:41:29] : End
+--------------------------------------------------
+[2024-01-31 08:43:58] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 08:43:57
+*FILESIZE* : 1932 (0x00078C)
+*CODESIZE* : 680 (0x0002A8)
+*CHECKSUM* : 0x00010AED
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 08:44:01] : End
+--------------------------------------------------
+[2024-01-31 08:44:23] : Begin
+--------------------
+*MCUTYPE* : STC8G1K08A-8PIN
+*MCUID* : F794C4D40E9156
+*FILENAME* : D:\GIT-Sync\STC8G1K08_Orin\build\Target 1\111.hex
+*FILETIME* : 2024年01月31日, 08:43:57
+*FILESIZE* : 1932 (0x00078C)
+*CODESIZE* : 680 (0x0002A8)
+*CHECKSUM* : 0x00010AED
+*ISPMODE* : 2
+*ISPRESULT* : 0
+--------------------
+[2024-01-31 08:44:25] : End
+--------------------------------------------------

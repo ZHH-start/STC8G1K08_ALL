@@ -1,0 +1,9 @@
+#ifndef _KEY_H_
+#define _KEY_H_
+#include "define.zhh"
+
+void Key_init();
+void Key_Scan();
+void Key_function();
+
+#endif

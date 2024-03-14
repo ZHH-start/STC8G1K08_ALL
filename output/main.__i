@@ -1,0 +1,1 @@
+"user\main.c" ROM(COMPACT) OPTIMIZE (8,SPEED) BROWSE INCDIR(.\user;.\STD_LIB) DEBUG OBJECTEXTEND PRINT(.\output\main.lst) TABS (2) OBJECT(.\output\main.obj)
