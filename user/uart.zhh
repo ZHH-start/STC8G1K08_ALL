@@ -8,6 +8,8 @@ extern uint8 rx_receive_string[]; // 接收存放字符串（8位）
 void Uart1Init(void);
 void UART_SendByte(unsigned char da);
 void UART_SendStr(char *p);
+unsigned int Str_length(char *p);
+unsigned char Str_check(char *str, char *con);
 void Str_clean(char *str);
 
 #endif
