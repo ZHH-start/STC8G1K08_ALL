@@ -1,5 +1,0 @@
-".\output\delay.obj",
-".\output\main.obj",
-".\output\uart.obj" 
-TO ".\output\111" 
-PRINT(".\output\111.m51") RAMSIZE(256) 

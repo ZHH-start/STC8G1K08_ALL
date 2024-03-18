@@ -24,6 +24,9 @@
           },
           {
             "path": "user/uart.c"
+          },
+          {
+            "path": "user/vl53l0x.c"
           }
         ],
         "folders": []
@@ -40,8 +43,7 @@
     "Target 1": {
       "excludeList": [
         "<virtual_root>/New Group",
-        "<virtual_root>/Source Group 1/uart_test.c",
-        "<virtual_root>/Source Group 1/iic.c"
+        "<virtual_root>/Source Group 1/uart_test.c"
       ],
       "toolchain": "Keil_C51",
       "compileConfig": {
