@@ -67,6 +67,7 @@ unsigned char Str_check(char *str, char *con)
     }
     return 0;
 }
+
 void Str_clean(char *str)
 {
     int i = 0;
