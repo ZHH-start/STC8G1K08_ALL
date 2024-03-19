@@ -88,4 +88,6 @@ void read_date(void)
         UART_SendByte(0x0d);
         UART_SendByte(0x0a);
     }
+    else
+    UART_SendStr("out of range\r\n");
 }

@@ -1,7 +1,7 @@
 #include "UART.zhh"
-#include "vl53l0x.zhh"
 
-int send_data_flag = 0; // 激光测距发送数据标志位，1为发送
+int send_data_flag         = 0;   // 激光测距发送数据标志位，1为发送
+uint8 rx_receive_string[8] = {0}; // 前7位用于存放接收数据，rx_receive_string[8]=1接收完成
 
 void Uart1Init(void) // 115200bps@33.1776.000MHz
 {
@@ -17,7 +17,7 @@ void Uart1Init(void) // 115200bps@33.1776.000MHz
     ET1 = 0;      // 禁止定时器中断
     TR1 = 1;      // 定时器1开始计时
     ES  = 1;      // 使能串口1中断
-    EA  = 1;//使能总中断
+    EA  = 1;      // 使能总中断
 }
 
 void UART_SendByte(unsigned char da)
@@ -67,20 +67,27 @@ unsigned char Str_check(char *str, char *con)
     }
     return 0;
 }
+void Str_clean(char *str)
+{
+    int i = 0;
+    for (i = 0; i < 7; i++) {
+        str[i] = 0;
+    }
+}
 
 // UART1中断
 void UartIsr() interrupt 4
 {
-    uint8 res;
-    static int send_cmd_count;
+    static int rx_count = 0;
     if (RI) {
-        RI  = 0;
-        res = SBUF;
-        if (res == 'B') {
-            if (send_cmd_count++ > 5)
-                send_data_flag = 1;
-        } else {
-            send_cmd_count = 0;
+        RI = 0;
+        if (rx_count == 7) {
+            rx_count             = 0;
+            rx_receive_string[8] = 1;
+        }
+        if (rx_count < 7) {
+            rx_receive_string[rx_count] = SBUF;
+            rx_count++;
         }
     }
 }
