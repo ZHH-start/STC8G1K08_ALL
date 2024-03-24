@@ -23,8 +23,6 @@ int main()
             UART_SendByte('a');
             Str_clean(rx_receive_string);
         }
-        else
-        UART_SendByte('b');
         
     }
 }
