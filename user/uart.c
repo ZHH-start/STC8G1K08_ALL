@@ -67,10 +67,7 @@ unsigned char Str_check(char *str, char *con)
     }
     return 0;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 串口接收字符串调试
 void Str_clean(char *str)
 {
     int i = 0;
