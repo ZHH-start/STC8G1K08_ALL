@@ -1,6 +1,6 @@
 #include "UART.zhh"
 
-int send_data_flag         = 0;   // 激光测距发送数据标志位，1为发送
+int send_data_flag          = 0;   // 激光测距发送数据标志位，1为发送
 uint8 rx_receive_string[10] = {0}; // 前7位用于存放接收数据，rx_receive_string[8]=1接收完成
 
 void Uart1Init(void) // 115200bps@33.1776.000MHz
@@ -77,13 +77,10 @@ unsigned char Str_check_test(char *str, char *con, uint8 number)
             cnt++;
         }
     }
-    if (cnt == number) {
-        UART_SendStr("check2\r\n");
+    if (cnt == number)
         return 1;
-    } else {
-        UART_SendStr("check3\r\n");
+    else
         return 0;
-    }
 }
 
 void Str_clean(char *str)
@@ -98,7 +95,7 @@ void Str_Queue_press()
 {
     uint8 i;
     for (i = 1; i < 10; i++) {
-        rx_receive_string[i-1] = rx_receive_string[i];
+        rx_receive_string[i - 1] = rx_receive_string[i];
     }
 }
 
