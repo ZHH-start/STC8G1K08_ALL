@@ -68,6 +68,22 @@ unsigned char Str_check(char *str, char *con)
     return 0;
 }
 
+unsigned char Str_check_test(char *str, char *con, uint8 number)
+{
+    unsigned int i   = 0;
+    unsigned int cnt = 0;
+    for (i = 0; i < number; i++) {
+        if (str[i] == con[i]) {
+            // UART_SendStr("check\r\n");
+            cnt++;
+        }
+    }
+    if (cnt == number)
+        return 1;
+    else
+        return 0;
+}
+
 void Str_clean(char *str)
 {
     int i = 0;
@@ -82,7 +98,7 @@ void UartIsr() interrupt 4
     static int rx_count = 0;
     if (RI) {
         RI = 0;
-        if (rx_count == 7) {
+        if (rx_count >= 7) {
             rx_count             = 0;
             rx_receive_string[8] = 1;
         }
