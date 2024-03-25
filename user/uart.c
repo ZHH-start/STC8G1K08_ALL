@@ -68,7 +68,7 @@ unsigned char Str_check(char *str, char *con)
     return 0;
 }
 
-unsigned char Str_check_test(char *str, char *con, uint8 number)
+unsigned char Str_check_test(char *str, char *con, unsigned int number)
 {
     unsigned int i   = 0;
     unsigned int cnt = 0;

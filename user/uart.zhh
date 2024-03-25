@@ -9,7 +9,7 @@ void Uart1Init(void);
 void UART_SendByte(unsigned char da);
 void UART_SendStr(char *p);
 unsigned int Str_length(char *p);
-unsigned char Str_check_test(char *str, char *con, uint8 number);
+unsigned char Str_check_test(char *str, char *con, unsigned int number);
 unsigned char Str_check(char *str, char *con);
 void Str_clean(char *str);
 
