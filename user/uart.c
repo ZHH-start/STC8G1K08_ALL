@@ -94,8 +94,8 @@ void Str_clean(char *str)
 void Str_Queue_press()
 {
     uint8 i;
-    for (i = 1; i < 10; i++) {
-        rx_receive_string[i - 1] = rx_receive_string[i];
+    for (i = 0; i < 9; i++) {
+        rx_receive_string[i] = rx_receive_string[i + 1];
     }
 }
 
@@ -105,11 +105,15 @@ void UartIsr() interrupt 4
     if (RI) {
         RI = 0;
         if (rx_receive_string[10] == 0) { // 必须等到传感器数据发送完成置0才会再次接收
-            if (SBUF != 0x0a) {
+            if (SBUF != 0x0a) {           // 如果没收到0x0a则压栈-接收
                 Str_Queue_press();
                 rx_receive_string[9] = SBUF; // 压栈操作
-            } else
+            } else {                         // 收到了则最后再压栈-接收一次，然后关闭标志位
+                Str_Queue_press();
+                rx_receive_string[9]  = SBUF; // 压栈操作
+                // UART_SendByte(SBUF);
                 rx_receive_string[10] = 1;
+            }
         }
     }
 }
