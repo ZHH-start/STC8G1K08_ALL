@@ -1,7 +1,7 @@
 #include "UART.zhh"
 
-int send_data_flag         = 0;   // 激光测距发送数据标志位，1为发送
-uint8 rx_receive_string[8] = {0}; // 前7位用于存放接收数据，rx_receive_string[8]=1接收完成
+int send_data_flag          = 0;   // 激光测距发送数据标志位，1为发送
+uint8 rx_receive_string[10] = {0}; // 前7位用于存放接收数据，rx_receive_string[8]=1接收完成
 
 void Uart1Init(void) // 115200bps@33.1776.000MHz
 {
@@ -74,7 +74,6 @@ unsigned char Str_check_test(char *str, char *con, unsigned int number)
     unsigned int cnt = 0;
     for (i = 0; i < number; i++) {
         if (str[i] == con[i]) {
-            // UART_SendStr("check\r\n");
             cnt++;
         }
     }
@@ -92,19 +91,29 @@ void Str_clean(char *str)
     }
 }
 
+void Str_Queue_press()
+{
+    uint8 i;
+    for (i = 0; i < 9; i++) {
+        rx_receive_string[i] = rx_receive_string[i + 1];
+    }
+}
+
 // UART1中断
 void UartIsr() interrupt 4
 {
-    static int rx_count = 0;
     if (RI) {
         RI = 0;
-        if (rx_count >= 7) {
-            rx_count             = 0;
-            rx_receive_string[8] = 1;
-        }
-        if (rx_count < 7) {
-            rx_receive_string[rx_count] = SBUF;
-            rx_count++;
+        if (rx_receive_string[10] == 0) { // 必须等到传感器数据发送完成置0才会再次接收
+            if (SBUF != 0x0a) {           // 如果没收到0x0a则压栈-接收
+                Str_Queue_press();
+                rx_receive_string[9] = SBUF; // 压栈操作
+            } else {                         // 收到了则最后再压栈-接收一次，然后关闭标志位
+                Str_Queue_press();
+                rx_receive_string[9]  = SBUF; // 压栈操作
+                // UART_SendByte(SBUF);
+                rx_receive_string[10] = 1;
+            }
         }
     }
 }
