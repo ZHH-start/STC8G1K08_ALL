@@ -42,8 +42,8 @@ unsigned short VL53L0X_decode_vcsel_period(short vcsel_period_reg)
 void read_date(void)
 {
     uint8 gbuf[16];
-    uint16 acnt;
-    uint16 scnt;
+    // uint16 acnt;
+    // uint16 scnt;
     uint16 dist;
     uint8 DeviceRangeStatusInternal;
     
@@ -61,22 +61,19 @@ void read_date(void)
     }
 
     gbuf[0]  = vl53l0x_read(0x14);
-    gbuf[7]  = vl53l0x_read(0x14 + 7);
-    gbuf[6]  = vl53l0x_read(0x14 + 6);
-    gbuf[9]  = vl53l0x_read(0x14 + 9);
-    gbuf[8]  = vl53l0x_read(0x14 + 8);
+    // gbuf[7]  = vl53l0x_read(0x14 + 7);
+    // gbuf[6]  = vl53l0x_read(0x14 + 6);
+    // gbuf[9]  = vl53l0x_read(0x14 + 9);
+    // gbuf[8]  = vl53l0x_read(0x14 + 8);
     gbuf[11] = vl53l0x_read(0x14 + 11);
     gbuf[10] = vl53l0x_read(0x14 + 10);
-    acnt     = makeuint16(gbuf[7], gbuf[6]);
-    scnt     = makeuint16(gbuf[9], gbuf[8]);
+    // acnt     = makeuint16(gbuf[7], gbuf[6]);
+    // scnt     = makeuint16(gbuf[9], gbuf[8]);
     dist     = makeuint16(gbuf[11], gbuf[10]);
 
     DeviceRangeStatusInternal = ((gbuf[0] & 0x78) >> 3);
     if (DeviceRangeStatusInternal == 11 && dist > 20 && dist < 1200) {
-        dist = dist - 60;
-        // vall = dist / 10000;
-        // UART_SendByte(vall + 0x30);
-        UART_SendByte('A');
+        dist = dist - 50;
         vall = dist % 10000 / 1000;
         UART_SendByte(vall + 0x30);
         vall = dist % 1000 / 100;

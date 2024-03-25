@@ -4,7 +4,7 @@ unsigned char flag = 0;
 
 int main()
 {
-    uint8 command[] = "a2begin"; // 测距命令
+    uint8 command[] = "A1begin"; // 测距命令
     uint8 i         = 0;
 
     I2C_Init();
