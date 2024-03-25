@@ -17,10 +17,7 @@ int main()
 
         delay_ms(100);
         if (rx_receive_string[8] == 1) {
-            check_result= Str_check_test(command, rx_receive_string, 7);
-            if (check_result == 1)
-                UART_SendStr("IN");
-            // read_date();
+            read_date();
             Str_clean(rx_receive_string);
             rx_receive_string[8] = 0; // 清除接收完成标志位，避免重复读取
         }

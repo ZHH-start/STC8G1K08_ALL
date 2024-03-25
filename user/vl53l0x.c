@@ -74,6 +74,7 @@ void read_date(void)
     DeviceRangeStatusInternal = ((gbuf[0] & 0x78) >> 3);
     if (DeviceRangeStatusInternal == 11 && dist > 20 && dist < 1200) {
         dist = dist - 45;
+        UART_SendStr("B2");
         vall = dist % 10000 / 1000;
         UART_SendByte(vall + 0x30);
         vall = dist % 1000 / 100;
