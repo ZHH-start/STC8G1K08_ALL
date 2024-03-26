@@ -4,7 +4,7 @@ unsigned char flag = 0;
 
 int main()
 {
-    uint8 command[] = "A03begin"; // 测距命令
+    uint8 command[] = "ZHHbegin"; // 测距命令
 
     I2C_Init();
     Uart1Init();
