@@ -3,7 +3,6 @@
 /.settings
 /.eide/log
 /.eide.usr.ctx.json
-/stcisp_log
 
 # project out
 /build
