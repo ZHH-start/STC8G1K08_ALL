@@ -3,9 +3,9 @@
 
 #include "define.zhh"
 
-//定义需要用到的IO口，改动需要同时修改C文件中的初始化函数
-sbit I2C_SCL = P3^3;
-sbit I2C_SDA = P3^2;
+// 定义需要用到的IO口，改动需要同时修改C文件中的初始化函数
+sbit I2C_SCL = P3 ^ 3;
+sbit I2C_SDA = P3 ^ 2;
 
 //--声明全局变量--//
 void I2C_Init();

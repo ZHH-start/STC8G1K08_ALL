@@ -1,9 +1,8 @@
 #include "UART.zhh"
 
-int send_data_flag         = 0;   // 激光测距发送数据标志位，1为发送
-uint8 rx_receive_string[8] = {0}; // 前7位用于存放接收数据，rx_receive_string[8]=1接收完成
+char recv_buf[32 + 1] = {'\0'};
 
-void Uart1Init(void) // 115200bps@33.1776.000MHz
+void Uart1Init(void) // 115200bps@27.000MHz
 {
     P3M0 = (P3M0 & ~0x01) | 0x02;
     P3M1 = (P3M1 & ~0x02) | 0x01;
@@ -40,7 +39,6 @@ void UART_SendStr(char *p)
         TI = 0;
     }
 }
-
 unsigned int Str_length(char *p)
 {
     unsigned int i;
@@ -66,29 +64,4 @@ unsigned char Str_check(char *str, char *con)
         }
     }
     return 0;
-}
-
-void Str_clean(char *str)
-{
-    int i = 0;
-    for (i = 0; i < 7; i++) {
-        str[i] = 0;
-    }
-}
-
-// UART1中断
-void UartIsr() interrupt 4
-{
-    static int rx_count = 0;
-    if (RI) {
-        RI = 0;
-        if (rx_count == 7) {
-            rx_count             = 0;
-            rx_receive_string[8] = 1;
-        }
-        if (rx_count < 7) {
-            rx_receive_string[rx_count] = SBUF;
-            rx_count++;
-        }
-    }
 }

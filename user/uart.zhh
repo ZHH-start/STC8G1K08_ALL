@@ -1,15 +1,18 @@
-#ifndef __UART_ZHH
-#define __UART_ZHH
+#ifndef __UART_TEST_ZHH
+#define __UART_TEST_ZHH
 #include "define.zhh"
 
-extern int send_data_flag;        // 激光测距发送数据标志位，1为发送
-extern uint8 rx_receive_string[]; // 接收存放字符串（8位）
+extern char recv_buf[32 + 1];
 
 void Uart1Init(void);
 void UART_SendByte(unsigned char da);
 void UART_SendStr(char *p);
-unsigned int Str_length(char *p);
-unsigned char Str_check(char *str, char *con);
-void Str_clean(char *str);
+
+void Uart2Init(void); // 115200bps@27.000MHz
+void UART2_SendByte(unsigned char da);
+void UART2_SendStr(char *p);
+// void ESP_SendData(char *p);
+
+// void ESP8266_Init(void);
 
 #endif

@@ -1,5 +1,5 @@
-#ifndef __DELAY_ZHH
-#define __DELAY_ZHH
+#ifndef __DELAY_H
+#define __DELAY_H
 #include "define.zhh"
 
 void delay_ms(uint16 x);
